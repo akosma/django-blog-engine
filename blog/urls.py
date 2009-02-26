@@ -13,6 +13,8 @@ feeds = {
 }
 
 urlpatterns = patterns('',
+    # The new URLs for the admin site have changed since the 0.96 version
+    # http://code.djangoproject.com/wiki/BackwardsIncompatibleChanges#Mergednewforms-adminintotrunk
     (r'^admin/(.*)', admin.site.root),
     (r'^$', views.index),
     (r'^(\d{1,4})$', views.post_by_id),
