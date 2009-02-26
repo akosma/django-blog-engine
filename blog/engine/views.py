@@ -1,7 +1,7 @@
 from django.http import HttpResponseRedirect, Http404
 from django.shortcuts import render_to_response, get_object_or_404
 from engine.models import Post, Comment, CommentForm, Tag
-from django.newforms import form_for_instance
+from django.forms.models import ModelForm
 from datetime import datetime
 
 def index(request):

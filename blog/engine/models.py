@@ -1,5 +1,5 @@
 from django.db import models, connection
-from django.newforms import form_for_model
+from django.forms.models import ModelForm
 from datetime import datetime
 
 class Tag(models.Model):
@@ -94,5 +94,7 @@ class Comment(models.Model):
                                                                        "date": self.date }
 
 
+class CommentForm(ModelForm):
+    class Meta:
+        model = Comment
 
-CommentForm = form_for_model(Comment)
