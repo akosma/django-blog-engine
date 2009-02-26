@@ -37,7 +37,7 @@ h2. Installation
 # @cd blog@
 # @python manage.py runserver@
 # Browse to "http://localhost:8000/":http://localhost:8000/.
-# You can log in the Django admin application at "http://localhost:8000/admin":http://localhost:8000/admin.
+# You can log in the Django admin application at "http://localhost:8000/admin":http://localhost:8000/admin using the username "adrian" and password "adrian".
 
 h2. References
 

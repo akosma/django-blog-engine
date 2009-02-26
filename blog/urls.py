@@ -2,6 +2,9 @@ import os.path
 from django.conf.urls.defaults import *
 from blog.engine import views
 from blog.engine.feeds import Atom, RSS2, RSS091
+from django.contrib import admin
+
+admin.autodiscover()
 
 feeds = {
     'atom': Atom,
@@ -10,7 +13,7 @@ feeds = {
 }
 
 urlpatterns = patterns('',
-    (r'^admin/', include('django.contrib.admin.urls')),
+    (r'^admin/(.*)', admin.site.root),
     (r'^$', views.index),
     (r'^(\d{1,4})$', views.post_by_id),
     (r'^(\d{4})/(\d{2})/(\d{2})/(.*)$', views.post_by_date_and_slug),
