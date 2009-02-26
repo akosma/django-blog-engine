@@ -1,0 +1,64 @@
+html {
+    text-align: center
+}
+
+body {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+a {
+    cursor: pointer;
+}
+
+h1 {
+    margin-right: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+div#entry, div.entry, div#comments, div#comment_form {
+    padding: 1em;
+    position: relative;
+}
+
+div#entry p, div.entry p {
+    margin-bottom: 10px;
+}
+
+p.date {
+    padding: 5px;
+    position: absolute;
+    top: 30px;
+    left: -112px;
+    width: 100px;
+    overflow: hidden;
+    height: 20px;
+}
+
+div#header {
+    height: 7em;
+}
+
+div#authorship {
+    margin: 20px;
+    text-align: right;
+}
+
+form input, form textarea {
+    width: 300px;
+}
+
+form input {
+    height: 1.2em;
+    margin-bottom: .2em;
+}
+
+input.button {
+    width: 75px;
+    height: 30px;
+}

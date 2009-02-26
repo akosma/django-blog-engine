@@ -1,0 +1,39 @@
+body, div, dl, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+    cursor: default
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-style: normal;
+    font-weight: normal
+}
+
+ol, ul {
+    margin: 0px;
+    padding-left: 20px;
+    list-style: circle;
+}
+
+address, caption, cite, code, dfn, th, var {
+    font-style: normal;
+    font-weight: normal
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+fieldset, img {
+    border: 0
+}
+
+caption, th {
+    text-align: left
+}
+
+q:before, q:after {
+    content: ''
+}

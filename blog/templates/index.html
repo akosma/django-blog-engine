@@ -1,0 +1,16 @@
+{% load markup %}
+{% extends "base.html" %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="entry">
+            <h2 class="title"><a href="/{{ post.get_nice_url }}">{{ post.title }}</a></h2>
+            <div class="summary">{{ post.get_summary|textile }}</div>
+            <p class="date">{{ post.date }}</p>
+            <p class="tags">tags: {{ post.get_tags|safe }}</p>
+            {% if is_user_auth %}
+                <p><a href="/admin/engine/post/{{ post.id }}/">Edit</a></p>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endblock %}

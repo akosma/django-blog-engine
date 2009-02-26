@@ -1,0 +1,34 @@
+body {
+    background-color: black;
+    color: #2B002D;
+}
+
+a {
+    color: #FF00F0;
+}
+
+a:hover {
+    background-color: #2B002D;
+}
+
+div.entry:first-child, div#entry {
+    color: white;
+    background-color: #2B002D;
+}
+
+p.date {
+    color: #FF00F0;
+    background-color: black;
+}
+
+div.entry:first-child p.date, div#entry p.date {
+    background-color: #2B002D;
+}
+
+div#container {
+}
+
+form input, form textarea {
+    color: white;
+    background-color: #2B002D;
+}

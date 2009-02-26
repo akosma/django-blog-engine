@@ -1,0 +1,30 @@
+<h2>add your comment</h2>
+<form action="/post/{{ post.id }}/comments/add" method="post">
+    <div>
+    <input type="hidden" name="post" value="{{ post.id }}" />
+    {% if is_user_auth %}
+        <input type="hidden" name="author" value="{{ author }}" />
+        <input type="hidden" name="email" value="{{ email }}" />
+        <input type="hidden" name="website" value="{{ website }}" />    
+    <table>
+    {% else %}
+    <table>
+        <tr><td><label for="id_author">author:</label></td>
+            <td>{{ form.author }}</td>
+            <td>{{ form.author.errors }}</td></tr>
+
+        <tr><td><label for="id_email">email:</label></td>
+            <td>{{ form.email }}</td>
+            <td>{{ form.email.errors }}</td></tr>
+
+        <tr><td><label for="id_website">website:</label></td>
+            <td>{{ form.website }}</td>
+            <td>{{ form.website.errors }}</td></tr>
+    {% endif %}
+        <tr><td><label for="id_body">body:</label></td>
+            <td>{{ form.body }}</td>
+            <td>{{ form.body.errors }}</td></tr>
+    </table>
+    <p><input type="submit" value="Submit" class="button"/></p>
+    </div>
+</form>

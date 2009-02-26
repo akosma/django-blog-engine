@@ -1,0 +1,33 @@
+{% load markup %}
+{% extends "base.html" %}
+
+{% block title %} - {{ post.title }} {% endblock %}
+
+
+{% block content %}
+<div id="entry" class="entry">
+    <h2 class="title"><a href="/{{ post.get_nice_url }}">{{ post.title }}</a></h2>
+    <div class="body">{{ post.body|textile }}</div>
+    <p class="date">{{ post.date }}</p>
+    <p class="tags">tags: {{ post.get_tags|safe }}</p>
+    {% if is_user_auth %}
+        <p><a href="/admin/engine/post/{{ post.id }}/">(edit this post)</a></p>
+    {% endif %}
+</div>
+
+{% if has_comments %}
+<div id="comments">
+    <h2>{{ comments_count }} comments so far</h2>
+    <dl class="comment_list">
+    {% for comment in comments %}
+        <dt class="comment_author">{{ comment.get_header|safe }}</dt>
+        <dd class="comment_body">{{ comment.body|textile }}</dd>
+    {% endfor %}
+    </dl>
+</div>
+{% endif %}
+
+<div id="comment_form">
+    {% include "comment_form.html" %}
+</div>
+{% endblock %}
