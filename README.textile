@@ -31,13 +31,13 @@ The application has only been tested with Safari 3, Opera 9, Internet Explorer 6
 
 h2. Installation
 
-# Run the following command to export a recent Django version: @svn export http://code.djangoproject.com/svn/django/tags/releases/1.0.2/django@
-# Make sure you have a "working Django trunk installation (the latest version!)":http://kosmaczewski.net/2008/01/09/starting-with-django-in-leopard/
-# Unzip the application (make sure you unzip it in a folder named “blog”).
-# Open a Terminal session and CD into the application folder.
-# Run “$ python manage.py runserver”.
-# Browse to “http://localhost:8000/”.
-# You can log in the Django admin application at http://localhost:8000/admin.
+# Clone this git repository: @git clone git://github.com/akosma/django-blog-engine.git@
+# Open a Terminal session and @cd django-blog-engine@
+# Run the following command to export a recent Django version in that folder: @svn export http://code.djangoproject.com/svn/django/tags/releases/1.0.2/django@
+# @cd blog@
+# @python manage.py runserver@
+# Browse to "http://localhost:8000/":http://localhost:8000/.
+# You can log in the Django admin application at "http://localhost:8000/admin":http://localhost:8000/admin.
 
 h2. References
 
